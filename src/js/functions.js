@@ -86,10 +86,10 @@ export function displayCurrentWeather(weatherData, location) {
         <img class="current-weather-image" src="http://openweathermap.org/img/wn/${weatherData["now"].weather.icon}@4x.png" alt="${weatherData["now"].weather.description}">
         <p class="current-weather-main">${weatherData["now"].weather.main}</p>
         <p class="current-weather-description">${weatherData["now"].weather.description.charAt(0).toUpperCase() + weatherData["now"].weather.description.slice(1)}</p>
-        <div class="current-weather-degree"><img class="icon" src="../src/assets/images/temperature.png"><p>${weatherData["now"].main.temp}°C</p></div>
-        <div class="current-weather-feels-like"><img class="icon" src="../src/assets/images/feels-like.png"><p>${weatherData["now"].main.feelsLike}°C</p></div>
-        <div class="current-weather-humidity"><img class="icon" src="../src/assets/images/humidity.png"><p>${weatherData["now"].main.humidity}%</p></div>
-        <div class="current-weather-wind"><img class="icon" src="../src/assets/images/wind.png"><p>${weatherData["now"].wind.speed}m/s</p></div>
+        <div class="current-weather-degree"><img class="icon" src="src/assets/images/temperature.png"><p>${weatherData["now"].main.temp}°C</p></div>
+        <div class="current-weather-feels-like"><img class="icon" src="src/assets/images/feels-like.png"><p>${weatherData["now"].main.feelsLike}°C</p></div>
+        <div class="current-weather-humidity"><img class="icon" src="src/assets/images/humidity.png"><p>${weatherData["now"].main.humidity}%</p></div>
+        <div class="current-weather-wind"><img class="icon" src="src/assets/images/wind.png"><p>${weatherData["now"].wind.speed}m/s</p></div>
     `;
 }
 // Function to display today's weather data in index.html
@@ -107,10 +107,10 @@ export function displayTodayWeather(weatherData) {
         weatherDiv.innerHTML = `
             <p class="today-time">${weatherData[frame].date.date.split(' ')[1].slice(0, -3)}</p>
             <img class="today-weather-image" src="http://openweathermap.org/img/wn/${weatherData[frame].weather.icon}@4x.png" alt="${weatherData[frame].weather.description}">
-            <div class="today-weather-degree"><img class="icon" src="../src/assets/images/temperature.png"><p>${weatherData[frame].main.temp}°C</p></div>
-            <div class="today-weather-feels-like"><img class="icon" src="../src/assets/images/feels-like.png"><p>${weatherData[frame].main.feelsLike}°C</p></div>
-            <div class="today-weather-humidity"><img class="icon" src="../src/assets/images/humidity.png"><p>${weatherData[frame].main.humidity}%</p></div>
-            <div class="today-weather-wind"><img class="icon" src="../src/assets/images/wind.png"><p>${weatherData[frame].wind.speed}m/s</p></div>
+            <div class="today-weather-degree"><img class="icon" src="src/assets/images/temperature.png"><p>${weatherData[frame].main.temp}°C</p></div>
+            <div class="today-weather-feels-like"><img class="icon" src="src/assets/images/feels-like.png"><p>${weatherData[frame].main.feelsLike}°C</p></div>
+            <div class="today-weather-humidity"><img class="icon" src="src/assets/images/humidity.png"><p>${weatherData[frame].main.humidity}%</p></div>
+            <div class="today-weather-wind"><img class="icon" src="src/assets/images/wind.png"><p>${weatherData[frame].wind.speed}m/s</p></div>
         `;
         // Append the weather div to the container
         todayContainerElement.appendChild(weatherDiv);
@@ -131,9 +131,9 @@ export function displayUpcomingWeather(weatherData) {
         weatherDiv.innerHTML = `
             <p class="upcoming-day">${new Date(weatherData[frame].date.date.split(' ')[0]).toLocaleDateString('en-US', { weekday: 'long' })}</p>
             <div class="upcoming-lower-container">
-                <div class="upcoming-weather-degree"><img class="icon" src="../src/assets/images/temperature.png"><p>${weatherData[frame].main.temp}°C</p></div>
-                <div class="upcoming-weather-humidity"><img class="icon" src="../src/assets/images/humidity.png"><p>${weatherData[frame].main.humidity}%</p></div>
-                <div class="upcoming-weather-wind"><img class="icon" src="../src/assets/images/wind.png"><p>${weatherData[frame].wind.speed}m/s</p></div>
+                <div class="upcoming-weather-degree"><img class="icon" src="src/assets/images/temperature.png"><p>${weatherData[frame].main.temp}°C</p></div>
+                <div class="upcoming-weather-humidity"><img class="icon" src="src/assets/images/humidity.png"><p>${weatherData[frame].main.humidity}%</p></div>
+                <div class="upcoming-weather-wind"><img class="icon" src="src/assets/images/wind.png"><p>${weatherData[frame].wind.speed}m/s</p></div>
             </div>
             <img class="upcoming-weather-image" src="http://openweathermap.org/img/wn/${weatherData[frame].weather.icon}@4x.png" alt="${weatherData[frame].weather.description}">
         `;
